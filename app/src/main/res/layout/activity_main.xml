@@ -52,7 +52,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="14dp"
         android:id="@+id/buttonCalc"
-        android:onClick="onClickCalcButton" />
+        android:onClick="onClickCalcButton (MainActivity)" />
 
     <TextView
         android:text="Total Tip: "
