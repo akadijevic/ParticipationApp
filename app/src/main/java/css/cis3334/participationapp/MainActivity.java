@@ -24,14 +24,14 @@ public class MainActivity extends AppCompatActivity {
         etNumParty = (EditText) findViewById(R.id.editTextNumParty);
         tvTotalTip = (TextView) findViewById(R.id.textViewTotalTip);
         tvTipPerPerson= (TextView) findViewById(R.id.textViewTipPerPerson);
-        tipCalc = new TipCalculator();
+
     }
 public void onClickCalcButton(View view) {
 
-    Double bill = Double.parseDouble(etBill.getText());
-    Double numPeople= Integer.parseInt(etNumParty.getText());
+    Double bill = Double.parseDouble(etBill.getText().toString());
+    Integer numPeople= Integer.parseInt(etNumParty.getText().toString());
 
-    tvTotalTip.setText("Total bill:" + tipCalc.calcTotalTip(bill).toString);
+    tvTotalTip.setText("Total bill:" + tipCalc.calcTotalTip(bill).toString());
     tvTipPerPerson.setText("Tip per person:" + tipCalc.calcTipPerPerson(bill, numPeople).toString());
 
 }
